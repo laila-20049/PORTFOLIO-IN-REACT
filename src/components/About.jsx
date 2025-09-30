@@ -52,25 +52,25 @@ export default function About() {
           >
             <span className="flex items-center gap-2">
               {skill.icon ? (
-                <FontAwesomeIcon 
-                  icon={skill.icon} 
-                  style={{ color: skill.color }} 
-                  className="text-2xl hover:scale-110 transition-transform duration-300"
-                />
-              ) : skill.name === "Tailwind CSS" ? (
-                <img 
-                  src="public/tailwind.png"
-                  alt="Tailwind CSS " 
-                  className="w-8 h-8 hover:scale-110 transition-transform duration-300" 
-                />
-              ) : (
-                <img 
-                  src="public/api.png"  
-                  alt="API" 
-                  className="w-8 h-8 hover:scale-110 transition-transform duration-300" 
-                />
-              )}
-              {skill.name}
+  <FontAwesomeIcon 
+    icon={skill.icon} 
+    style={{ color: skill.color }} 
+    className="text-2xl hover:scale-110 transition-transform duration-300"
+  />
+) : skill.name === "Tailwind CSS" ? (
+  <img 
+    src="/tailwind.png"   // بدل public/tailwind.png بـ /tailwind.png
+    alt="Tailwind CSS" 
+    className="w-8 h-8 hover:scale-110 transition-transform duration-300" 
+  />
+) : (
+  <img 
+    src="/api.png"        // بدل public/api.png بـ /api.png
+    alt="API" 
+    className="w-8 h-8 hover:scale-110 transition-transform duration-300" 
+  />
+)}
+
             </span>
           </div>
         ))}
