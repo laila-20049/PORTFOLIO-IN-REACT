@@ -48,30 +48,33 @@ export default function About() {
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className="card bg-[#23232a] text-lg font-semibold shadow-md p-4 rounded-lg hover:shadow-xl transition duration-300 flex flex-col items-center"
+            className="card bg-[#23232a] text-lg shadow-md p-4 rounded-lg hover:shadow-xl transition duration-300 flex flex-col items-center"
           >
-            <span className="flex items-center gap-2">
-              {skill.icon ? (
-  <FontAwesomeIcon 
-    icon={skill.icon} 
-    style={{ color: skill.color }} 
-    className="text-2xl hover:scale-110 transition-transform duration-300"
-  />
-) : skill.name === "Tailwind CSS" ? (
-  <img 
-    src="/tailwind.png"   // بدل public/tailwind.png بـ /tailwind.png
-    alt="Tailwind CSS" 
-    className="w-8 h-8 hover:scale-110 transition-transform duration-300" 
-  />
-) : (
-  <img 
-    src="/api.png"        // بدل public/api.png بـ /api.png
-    alt="API" 
-    className="w-8 h-8 hover:scale-110 transition-transform duration-300" 
-  />
-)}
+            {/* Skill name with gradient color */}
+            <div className="mb-3 text-base font-bold bg-gradient-to-r from-pink-400 to-sky-400 bg-clip-text text-transparent">
+              {skill.name}
+            </div>
 
-            </span>
+            {/* Icon below */}
+            {skill.icon ? (
+              <FontAwesomeIcon 
+                icon={skill.icon} 
+                style={{ color: skill.color }} 
+                className="text-4xl hover:scale-110 transition-transform duration-300"
+              />
+            ) : skill.name === "Tailwind CSS" ? (
+              <img 
+                src="/tailwind.png"
+                alt="Tailwind CSS" 
+                className="w-12 h-12 hover:scale-110 transition-transform duration-300" 
+              />
+            ) : (
+              <img 
+                src="/api.png"  
+                alt="API" 
+                className="w-12 h-12 hover:scale-110 transition-transform duration-300" 
+              />
+            )}
           </div>
         ))}
       </div>
