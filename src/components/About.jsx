@@ -59,13 +59,13 @@ export default function About() {
                 />
               ) : skill.name === "Tailwind CSS" ? (
                 <img 
-                  src="src/components/tailwind.png"
+                  src="public/tailwind.png"
                   alt="Tailwind CSS " 
                   className="w-8 h-8 hover:scale-110 transition-transform duration-300" 
                 />
               ) : (
                 <img 
-                  src="src/components/api.png"  
+                  src="public/api.png"  
                   alt="API" 
                   className="w-8 h-8 hover:scale-110 transition-transform duration-300" 
                 />
